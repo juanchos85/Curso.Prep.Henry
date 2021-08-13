@@ -1,0 +1,12 @@
+03-JS-II
+
+Bucle for: es un ciclo(bucle) que se repite, por lo cual se inicia( normalmente con 0),
+ se condiciona para que se repita una determinada cantidad de veces, y la variable que se utiliza 
+ iniciar, condicionar se incrementa, para ir contando cuantas vueltas va dando. Asi se puede hacer 
+ una serie de instrucciones una cierta cantidad de veces.
+ operadores || or(o), se utliza para comparar dos argumentos, de los cuales basta uno solo de ellos que sea verdadero
+ para que se ejectue la funcion u operacion.
+ el operador && and(y), a tambien se utiliza para comparar dos variables, de las cuales se necesitan que sean ambas 
+ verdaderas para que se tome por true,
+ mientras que el operador (!==)not , lo que hace es cambiar el valor de verdad de la condicion, si esta se encuentra
+ en verdadero, not, lo transforma en falso y viceversa.

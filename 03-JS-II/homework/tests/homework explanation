@@ -1,0 +1,11 @@
+*el bucle for, atraves de una variable recorre un elemento(objeto, array etc), realizando instrucciones
+que le indiquemos en su interior. con posiblidad de rotrnar o no algo.
+
+*el comparador logico &&(and), permite que dada dos o mas preoposiciones, se tome por verdadera
+la comparacion de ambas, si y solo si, si todas son verdaderas, de lo contrario sera falsa.
+
+*el comparador logico ||(or), comparará dos o mas preoposiciones tomando como verdadera dicha 
+comparación, con tal que haya, tan sola una de las premisas como verdaderas.
+
+*y el operador !(not), es un inversor logico cambiando el valor logico de la premisa, asi, si esta
+es falsa, con el operador logico en cuestión pasara a su valor verdadero, y viceversa
