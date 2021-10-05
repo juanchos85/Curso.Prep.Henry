@@ -20,37 +20,33 @@ for (var clave in objeto){
 
     }
     
-    // npm test JSX.test.js
+
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
-  //Escribe tu código aqu
-  var A =[];
-var N = string.split("");
-var L = [];
-var  s = 0;
-
-for ( var i = 0; i < N.length; i++){
-  for (var j = 0; j < N.length; j++){
-    if( N[i] === N[j]){
-       A = N.pop(N[j]);
+  //Escribe tu código aqui
+  var n = string.split("");
+  var j = [...new Set(n)];
+  var p = {}
+  var l = 0;
+  var y = 0;
+  var acu = 0;
+  for ( var r = 0; r < j.length; r++){
+        for ( var o = 0; o < n.length; o++){
+      if (j[r] === n[o]){
+     y++;
+       p[j[r]]= y - acu;    
+      }
+      }
+     acu = 0 + y;
     }
-  }
-}
-for (var q = 0; q < N.length; q++){
-  for (var y = 0; y < A.length; y++){
-    if(N[q] === A[y]){
-      s++;
-      L.unshift(s);
-    }
-  }
-}
-return A.length;
-}
-
-
+      
+    
+    return p;
+      };
+    
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
@@ -65,13 +61,9 @@ if (s.charAt(i) === s.charAt(i).toUpperCase()){
   if (s.charAt(i) === s.charAt(i).toLowerCase()){
     J = J + s.charAt(i);
   }
-
 }
-
-   return N + J;
- 
+   return N + J; 
 }
-
 
 function asAmirror(str) {
   //La función recibe una frase. 
@@ -87,12 +79,8 @@ for ( var i = 0; i < N.length -1; i++){
   S = S  + N[i].split("").reverse().join("")+ " ";
 T = S + N[N.length-1].split("").reverse().join("");
 }
-  return  T;
-  
-  
- 
+  return  T; 
 } 
-
 
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
@@ -102,13 +90,8 @@ function capicua(numero){
   // for (var i = 0; i < numero.length; i++){
 if (numero.toString() === numero.toString().split("").reverse().join("")) {return "Es capicua";}
 return "No es capicua";
-// }
-
-  
-  
   
 }
-
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
@@ -123,9 +106,7 @@ function deleteAbc(cadena){
 N.push(cadena.charAt(i));
     }
     return N.join("");
- 
   }
-// npm test JSX.test.js
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
@@ -155,7 +136,7 @@ N.push(arreglo1[i]);
 }
 return N;
  
-}
+};
 
 
 

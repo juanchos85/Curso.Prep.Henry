@@ -107,7 +107,7 @@ function promedioResultadosTest(resultadosTest) {
      cont = cont + resultadosTest[i];
   
     prome = cont / j;
-    //return prome; por que no adentro?
+   
   }
 return prome;
 }
