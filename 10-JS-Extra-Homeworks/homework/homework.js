@@ -10,47 +10,44 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
- 
-  //let claves = Object.keys(objeto);
- // let valores = Object.values(objeto);
- // var acum = [];
- // var acu = [acum];
- // var a = null;
-  //for (var i = 0; i < claves.length; i++){
-  //  for (var j = 0; j < valores.length; j++){
-     //a= acum.push(i, j);
-    //  acum = acum + a;
-     // return acu;
-     var a =[];
-     var f = [];
-     for ( i = 0; i < objeto.length; i++)
-    {
-       a = a + [i];
-    }
-    return a;
 
-    
+var L = [];
+for (var clave in objeto){
 
-  
+ L.push([clave, objeto[clave]]);
 }
-//npm test JSX.test.js
+ return L;
 
+    }
+    
+    // npm test JSX.test.js
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
-  //Escribe tu código aquí
+  //Escribe tu código aqu
+  var A =[];
+var N = string.split("");
+var L = [];
+var  s = 0;
 
-  function atr (str)
-  {
-    for ( var i = 0; i < str.length; i++){
-      var p = 0;
-      str.charAt(i);
-      p = p + i;
+for ( var i = 0; i < N.length; i++){
+  for (var j = 0; j < N.length; j++){
+    if( N[i] === N[j]){
+       A = N.pop(N[j]);
     }
   }
-
+}
+for (var q = 0; q < N.length; q++){
+  for (var y = 0; y < A.length; y++){
+    if(N[q] === A[y]){
+      s++;
+      L.unshift(s);
+    }
+  }
+}
+return A.length;
 }
 
 
@@ -59,31 +56,20 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí 
- function nene (s){
+  var N = "";
+  var J = "";
+ 
+for (var i = 0; i < s.length; i++){
+if (s.charAt(i) === s.charAt(i).toUpperCase()){ 
+  N = N + s.charAt(i);}
+  if (s.charAt(i) === s.charAt(i).toLowerCase()){
+    J = J + s.charAt(i);
+  }
 
-  for ( var i = 0; i < s.length; i++)
-  var L = "";
-   if (s.charAt(i) === s.toUpperCase(i)){
-  L = L + s.substring(i);
-return L;}
- /* M = M + s.slice(i);*/
-  var v = s.unshift(L);
-  return v;
-   
 }
-  
-  
-     /*    function alFrent(s){
-       for ( var i = 0; i < s.length; i++){
-word = "";
-      var L = L + s.chart(i)
-      if (isUpperCase(L))
-      word = word + L;
-      return word;
-       }
-      return s.unshift(word);*/
-     
-   
+
+   return N + J;
+ 
 }
 
 
@@ -93,12 +79,18 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  function toEnd (str){
-    for ( var i = 0; i < str.length; i++) 
-   str[i].reverse();
-    
-    return str;
-  }
+  
+  var N = str.split(" ");
+  var S = "";
+  var T = "";
+for ( var i = 0; i < N.length -1; i++){
+  S = S  + N[i].split("").reverse().join("")+ " ";
+T = S + N[N.length-1].split("").reverse().join("");
+}
+  return  T;
+  
+  
+ 
 } 
 
 
@@ -107,15 +99,12 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  function capi (numero){
-for ( var i = 0; i < numero.length; i++)
- var re = numero.toString();
- 
- if ( numero.toString(numero) === re.reverse(numero) )
- {return "Es capicua";}
- else {return "No es capicua";}
+  // for (var i = 0; i < numero.length; i++){
+if (numero.toString() === numero.toString().split("").reverse().join("")) {return "Es capicua";}
+return "No es capicua";
+// }
 
-  }
+  
   
   
 }
@@ -126,21 +115,17 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 
-    function del (cadena){
-   for (var i = 0; i < cadena.length; i ++){
-   
-   if (cadena[i] === "a" || cadena[i] === "b" || cadena[i] === "c")
-   return delete cadena[i];
-   }
-   if (cadena[i] === "a" || cadena[i] === "b" || cadena[i] === "c")
-return cadena;
-else
-return cadena;
+  var N = [];
+    for (var i = 0; i < cadena.length; i++){
+     if ( cadena.charAt(i) === "a"  ){ continue;}
+      if ( cadena.charAt(i) === 'b') { continue;}
+      if ( cadena.charAt(i) === 'c') { continue;}
+N.push(cadena.charAt(i));
     }
-
-}
-
-
+    return N.join("");
+ 
+  }
+// npm test JSX.test.js
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
@@ -160,18 +145,16 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
- function inter  (arreglo1, arreglo2) { 
-   for ( var p = 0; p < arreglo1.length; p++)
-
-  if ( arreglo1.length(p) === arreglo2.length(p)){
-    var W = [];
-    var empty = [];
-    W.push(p);}
-    return W;
+  var N = [];
+for ( var i = 0; i < arreglo1.length; i++){
+  for (var j = 0; j < arreglo2.length; j++){
+    if(arreglo1[i] === arreglo2[j]){
+N.push(arreglo1[i]);
+    }
+  }
+}
+return N;
  
-    
-  return empty;
- }
 }
 
 

@@ -1,0 +1,3 @@
+array es un elemento, el cual esta conformado por un al menos un espacio, el cual
+comienza con el indice 0. se pueden guardar en el diferentes tipos de elementos,
+como un arreglo, una funcion, un objeto, numeros, strings
